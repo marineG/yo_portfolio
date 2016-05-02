@@ -14,6 +14,12 @@ function theme_enqueue_scripts(){
 	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
 	wp_enqueue_script('livereload');
 
+	wp_register_script('bootstrapjs', get_bloginfo('template_url') . '/js/vendor/bootstrap/dist/js/bootstrap.js');
+	wp_enqueue_script('bootstrapjs');
+
+	wp_register_script('bootstrapcss', get_bloginfo('template_url') . '/js/vendor/bootstrap/dist/css/bootstrap.min.css');
+	wp_enqueue_script('bootstrapcss');
+
 	wp_enqueue_style('global', get_bloginfo('template_url') . '/css/global.css');
 }
 
